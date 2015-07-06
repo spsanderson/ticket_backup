@@ -4,6 +4,9 @@ Option Explicit
 
 Sub cmdBackUpStats()
 
+  'Turn off screen updating
+  Application.ScreenUpdating = False
+  
   ActiveWorkbook.Save
   Sheets("Cumulative Stats").Select
   ActiveSheet.Range("A1:H43").Select
@@ -64,6 +67,9 @@ Sub cmdBackUpStats()
   ' Re-save the workbook before closing out
   ActiveWorkbook.Save
   
+  'Turn screen updating back on
+  Application.ScreenUpdating = True
+  
   ' Close out excel
   Application.Quit
   
@@ -73,8 +79,14 @@ End sub
 
 Sub cmdRefreshData()
   
+  'Turn off screen updating
+  Application.ScreenUpdating = False
+  
   ActiveWorkbook.Save
   ActiveWorkbook.RefreshAll
   ActiveWorkbook.Save
+  
+  'Turn screen updating back on
+  Application.ScreenUpdating = True
   
 End Sub
