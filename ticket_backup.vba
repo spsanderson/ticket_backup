@@ -60,6 +60,10 @@ Sub cmdBackUpStats()
   ActiveCell.Offset(0, -1).Select
   ActiveCell.Value = Now
   
+  ' Get "Doned" amount
+  ActiveCell.Offset(0, 9).Select
+  ActiveCell.Value = ActiveCell.Offset(-1, -8) - ActiveCell.Offset(0, -8)
+  
   ' Go to the Cumulative Stats Page
   Sheets("Cumulative Stats").Select
   Range("I13").Select
