@@ -86,7 +86,7 @@ Sub cmdRefreshData()
   'Turn off screen updating
   Application.ScreenUpdating = False
   
-  ActiveWorkbook.Save
+  ' Refresh the pivot table and then save
   ActiveWorkbook.RefreshAll
   ActiveWorkbook.Save
   
