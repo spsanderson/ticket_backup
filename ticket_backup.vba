@@ -9,7 +9,7 @@ Sub cmdBackUpStats()
   
   ActiveWorkbook.Save
   Sheets("Cumulative Stats").Select
-  ActiveSheet.Range("A1:H43").Select
+  ActiveSheet.Range("A1:K43").Select
   ActiveWorkbook.EnvelopeVisible = True
   With ActiveSheet.mailEnvelope
     .Item.to = 
